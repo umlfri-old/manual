@@ -1,0 +1,23 @@
+a {text-decoration: none; }
+
+body { padding-left: 15px; width: 800px; min-width: 800px; max-width: 800px; }
+
+ul { margin-top: 0px; margin-bottom: 0px; }
+
+img { border: 1px solid #666666; }
+
+table.img tr td { padding: 5px; text-align: center; }
+
+/* Stav Doku / App */
+.WIP * {	color: #006666; } /* Rozpracovaná Doku */
+
+.TODO * { color: #CCCCCC; font-style: italic;} /* Treba dopísať do Doku */
+
+.NOT * { color: #FF0033; } /* Nie je implementované!!! */
+
+.HIDE * { display: none; }
+
+/* Poznámky a upozornenia: */
+.note, .warning  { font-family: arial; font-size: 95%; font-style: italic; }
+
+.warning { color: #CC2200; }
