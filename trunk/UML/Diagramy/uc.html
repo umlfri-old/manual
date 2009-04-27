@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Diagram prípadov použitia (Use Case Diagram)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="pageStyle.css" />
+	<base target="helpContent" />
+</head>
+
+<style>
+	a {
+		text-decoration: none;
+	}
+
+	ul.hier1, ul.hier2, ul.hier3 {
+		margin-left: -20px;
+		#margin-left: 17px; /*IE*/
+	}
+
+	ul.hier1 > li {
+		#margin-left: 0px; /*IE*/
+		font-size: larger;
+		font-weight: bold;
+		line-height: 200%;
+	}
+
+	ul.hier2 > li {
+		#margin-left: 3px; /*IE*/
+		font-size: medium;
+		font-weight: normal;
+		line-height: 100%;
+	}
+
+	ul.hier3 > li {
+		#margin-left: 5px; /*IE*/
+		font-size: 85%;
+		font-weight: normal;
+		line-height: 100%;
+	}
+</style>
+
+<body>
+	<ul class="hier1">
+		<h2>
+			UML - Diagram prípadov použitia (Use Case Diagram)
+		</h2>
+		
+			Diagram prípadov použitia je popri Diagramu tried a Diagramu aktivít jeden z najpoužívanejších UML diagramov.
+			Používa sa na popis správania systému.
+			
+			<br/><br/>
+			<b>Aktér </b>vo forme symbolickej figúrky (osoba), prípadne štvorca (stroj) interaguje v rámci hraníc systému s tzv. Prípadmi použitia vo forme malých elíps.
+			<b>Prípady použitia </b> sú akési z pohľadu používateľa viac alebo menej zaujímavé činnosti, ktoré nie sú reprezentované iba grafickou reprezentáciou vo forme elipsy, 
+			ale najmä scenárom, ktorý presne popisuje danú činnosť. Odporúčam naštudovať niektoré zaužívané princípy písania scenárov k Prípadom použitia.
+			<br/><br/>
+			Prípady použitia sú prepojené s aktérom, ktorý ich vykonáva alebo je s PP (UC) v nejakom inom vzťahu (napr. preberá výstupy). Iný vzťah je medzi viacerými PP (UC), a to vo forme rôznych typov vzťahov.
+			<b>Vzťah "include" </b> hovorí o závislosti jedného Prípadu použitia na inom, a to tým, že pôvodný PP (UC) vyžaduje iný PP (UC) a v postupe, v akom má byť programovaná funkčnosť
+			predchádza "includovaný" PP (UC) pôvodný.
+			<b>Vzťah "extends" </b> hovorí tiež o závislosti jedného Prípadu použitia na inom, a to tým, že pôvodný PP (UC) môže používať aj iný PP (UC), ale nemusí. Orientácia vzťahu je opačná ako v "include", pretože je dôležitejší pôvodný PP (UC) a jemu asociovaný PP (UC) nie je nevyhnutný pre jeho funkčnosť.
+			
+			<br/> <br />
+			<img alt="Sample"  src="Pics/Use_Case/extend.png" width="417px" height="243px" />
+			<img alt="Sample"  src="Pics/Use_Case/extension_points.png" width="187px" height="231px" />
+			<img alt="Sample"  src="Pics/Use_Case/generalizacia.png" width="291px" height="267px" />
+			<img alt="Sample"  src="Pics/Use_Case/include.png" width="521px" height="227px" />
+			<img alt="Sample"  src="Pics/Use_Case/use_case_model.png" width="685px" height="534px" />
+		
+			<br/> <br/>
+			
+		Pre viac informácii odporúčam navštíviť iné zdroje, napríklad <a href="http://en.wikipedia.org/wiki/Use_case"> Use Case Diagram wiki</a>
+	</ul>
+</body>
+
+
+</html>
