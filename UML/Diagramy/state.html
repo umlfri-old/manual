@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Stavový diagram (State Diagram description)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="pageStyle.css" />
+	<base target="helpContent" />
+</head>
+
+<style>
+	a {
+		text-decoration: none;
+	}
+
+	ul.hier1, ul.hier2, ul.hier3 {
+		margin-left: -20px;
+		#margin-left: 17px; /*IE*/
+	}
+
+	ul.hier1 > li {
+		#margin-left: 0px; /*IE*/
+		font-size: larger;
+		font-weight: bold;
+		line-height: 200%;
+	}
+
+	ul.hier2 > li {
+		#margin-left: 3px; /*IE*/
+		font-size: medium;
+		font-weight: normal;
+		line-height: 100%;
+	}
+
+	ul.hier3 > li {
+		#margin-left: 5px; /*IE*/
+		font-size: 85%;
+		font-weight: normal;
+		line-height: 100%;
+	}
+</style>
+
+<body>
+	<ul class="hier1">
+		<h2>
+			UML - Stavový diagram (State Machine Diagram description)
+		</h2>
+		<text>
+			Stavový diagram zobrazuje stavy jedného objektu, v ktorých sa počas svojej existencie môže nachádzať ako následok reakcie na udalosti vyskytujúcich sa v systéme.
+			Stavový diagram obsahuje <b>Stavy</b> (obdĺžnik s oblými rohmi), tento element predstavuje stav objektu v danom okamihu. Každý stavový diagram musí mať začiatok a koniec,
+			 pričom začiatok a koniec sú tiež stavy. <b>Prechod</b> (Transition) z jedného stavu do druhého zobrazuje šípka. Prechod môže obsahovať <b>Udalosť</b> (dôvod prechodu, môže to byť
+			  signál, udalosť, zmena v nejakej podmienke a pod.), <b>Podmienku</b> (podmienka, ktorá musí byť splnená, aby prechod medzi stavmi nastal) a <b>Efekt</b> (akcia, ktorá sa vykoná ako 
+			  dôsledok prechodu z jedného stavu do druhého). Syntax pre Prechod je: Udalosť[Podmienka]/Efekt.
+			
+			<br/> </br>
+			<br/> </br>
+			
+			<b>Ukážka stavového diagramu mobilného telefónu:</b>
+			<br>
+			<img alt="Pomenovanie objektov"  src="Pics/state/state1.png" width="720px" height="430px" />
+			</br>
+		</text>
+		
+		</br><br/> 	
+		Pre viac informácii odporúčam navštíviť iné zdroje, napríklad <a href="http://en.wikipedia.org/wiki/UML_state_machine"> State Machine Diagram wiki</a>
+	</ul>
+</body>
+
+
+</html>
