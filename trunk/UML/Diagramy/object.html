@@ -42,29 +42,45 @@
 <body>
 	<ul class="hier1">
 		<h2>
-			UML - Diagramy objektov (Object Diagram description)
+			UML - Diagramy objektov (Object Diagram)
 		</h2>
 		<text>
 			Diagram objektov hovorí o tom, ako vyzerá systém alebo jeho časť v určitom čase, čo sa týka jeho objektov.	Diagram objektov
-			je viac konkrétny ako diagram tried a iba tie aspekty modelu, o ktoré sa práve zaujímame, sú ukázané v diagrame objektov. 
-			Objekty zobrazujú meno, atribúty a nezobrazujú sa operácie (v diagrame tried sa zobrazujú). Meno rovnako ako aj atribúty objektu 
-			môžu mať hodnoty. Meno objektu býva podčiarknuté. Vzťah medzi objektmi, nazýva sa väzba, predstavuje konkrétny vzťak medzi objektami. Pomenovaie väzby býva podčiarknuté.
+			je viac konkrétny ako diagram tried a iba tie aspekty modelu, o ktoré sa práve zaujímame, sú ukázané v diagrame objektov.
 			
-			<br/> </br>
-			<br/> </br>
+			<br/><br/>
+			<b>Elementy a spojenia v UML .FRI:</b>
+			<ul class="hier2">
+				<li><b>Objekt </b>sa modeluje ako obdĺžnik. Ak obsahuje aj atribúty, tak je rozdelený vodorovnou čiarou na dve oblasti. Objekt zobrazuje meno, atribúty a nezobrazuje operácie (v diagrame tried sa zobrazujú). Meno rovnako ako aj atribúty objektu 
+				môžu mať hodnoty. Meno objektu býva podčiarknuté a od názvu triedy je oddelené dvojbodkou. Objekt môže byť buď pomenovaný alebo nepomenovaný.
+				</li><br/>
+				<img alt="Objekt"  src="Pics/object/object1.png" width="350px" height="60px" />
+				<br/>
+				Ak objekt zobrazuje atribúty, tak atribúty musia mať aj hodnotu. Syntax pre zápis atribútov je podobný ako je syntax pre zápis atribútov v diagrame tried. Rozdiel 
+				je iba v nutnosti udávať hodnoty atribútov.
+				<br/>
+				<img alt="Objekt"  src="Pics/object/object.png" width="150px" height="100px" />
+				
+				<li><b>Balíček </b> sa používa na zoskupovanie elementov, ktoré spolu zdieľajú rovnakú hierachiu dedičnosti alebo spolu navzájom úzko spolupracujú. Takto zoskupeným elementov poskytuje balíček 
+				súhrnné pomenovanie (namespace).
+				</li><br/>
+				<img alt="Balíček"  src="Pics/object/package.png" width="137px" height="108px" />
+				
+				<li><b>Väzba </b>predstavuje konkrétny vzťah medzi objektmi. Pomenovaie väzby býva podčiarknuté. Modeluje sa ako orientovaná plná čiara.
+				</li><br/>
+				<img alt="Väzba" src="Pics/object/object2.png" width="500px" height="100px" />
+				
+				<br/><br/>
+				<li><b>Poznámka </b> slúži na bližšie popísanie jednotlivých elementov diagramu a je možné ju pripojiť iba k entitám, nie k vzťahom medzi entitami.
+				</li><br/>
+				<img alt="Poznámka"  src="Pics/object/note.png" width="157px" height="88px" />
 			
-			<b>Následuje niekoľko príkladov objektov v diagrame objektov:</b>
-			<br>
-			<img alt="Pomenovanie objektov"  src="Pics/object/object1.png" width="350px" height="60px" />
-			 
+				<br/><br/>
+				<li><b>Čiara k poznámke </b> znázorňuje, ktorú entitu poznámka bližšie popisuje.
+				</li><br/>
+				<img alt="Čiara k poznámke"  src="Pics/object/dot_line.png" width="139px" height="67px" />
+			</ul>
 			</br><br/> 
-			</br><br/> 
-			
-			</br>
-			<b>Následujúci príklad obsahuje aj zobrazenie atribútov a ich hôdnôt a pomenovanie väzby medzi objektami:</b>
-			<br>
-			<img alt="Atribúty a väzby v diagrame objektov"  src="Pics/object/object2.png" width="500px" height="100px" />
-			</br>
 		</text>
 		
 		</br><br/> 	

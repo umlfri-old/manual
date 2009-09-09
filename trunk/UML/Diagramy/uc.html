@@ -45,18 +45,67 @@
 			UML - Diagram prípadov použitia (Use Case Diagram)
 		</h2>
 		
-			Diagram prípadov použitia je popri Diagramu tried a Diagramu aktivít jeden z najpoužívanejších UML diagramov.
-			Používa sa na popis správania systému.
+			Prípady použitia slúžia na špecifikáciu požadovaných použití systému. Zachytávajú požiadavky systému, teda čo systém má vykonávať. Kľúčové slová spojené 
+			s diagramom prípadov použitia sú: aktér, prípad použitia a hranica systému. Používatelia a iné systémy, ktoré môžu interagovať so systémom sa reprezentujú ako aktéri. 
+			Aktéri vždy modelujú subjekty mimo systému. Požadované správanie sa systému je špecifikované jedným alebo viacerými prípadmi použitia, ktoré sú definované podľa potrieb
+			aktéra. 
+			<br/><br/>
 			
-			<br/><br/>
-			<b>Aktér </b>vo forme symbolickej figúrky (osoba) interaguje v rámci hraníc systému s tzv. Prípadmi použitia (ďalej PP) vo forme malých elíps.
-			<b>Prípady použitia </b> sú akési, z pohľadu používateľa, viac alebo menej zaujímavé činnosti, ktoré nie sú reprezentované iba grafickou reprezentáciou vo forme elipsy, 
-			ale aj scenárom, ktorý presne popisuje danú činnosť.
-			<br/><br/>
-			Prípady použitia sú prepojené s aktérom, ktorý ich vykonáva alebo je s PP v nejakom inom vzťahu (napr. preberá výstupy). Iný vzťah je medzi viacerými PP , a to vo forme rôznych typov vzťahov.
-			<b>Vzťah "include" </b> hovorí o závislosti jedného Prípadu použitia na inom, a to tým, že pôvodný PP vyžaduje iný PP a v postupe, v akom má byť programovaná funkčnosť,
-			predchádza "includovaný" PP pôvodný.
-			<b>Vzťah "extend" </b> hovorí tiež o závislosti jedného Prípadu použitia na inom, a to tým, že pôvodný PP môže používať aj iný PP, ale nemusí. Orientácia vzťahu je opačná ako v "include", pretože je dôležitejší pôvodný PP a jemu asociovaný PP nie je nevyhnutný pre jeho funkčnosť.
+			<b>Elementy a spojenia v UML .FRI:</b>
+			<br/>
+			<ul class="hier2">
+				<li><b>Aktér </b>modeluje typ roly hranej entitou interagujúcou so systémom (výmena dát a signálov), ale nie je súčasťou systému, nachádza sa mimo jeho hraníc.
+				Aktér môže reprezentovať rolu používateľa, externého hardweare-u alebo iného systému. Aktér sa modeluje ako "paličkový človek" spolu s menom aktéra.
+				</li><br/>
+				<img alt="Aktér"  src="Pics/uc/actor.png" width="114px" height="152px" />
+			
+				<br/><br/>
+				<li><b>Prípad použitia </b>je množina akcií vykonaných systémom, ktoré majú význam, resp. hodnotu pre aktéra alebo inú súčasť systému. Prípady použitia definujú správanie 
+				sa systému. Toto správanie zahŕňujúce interakcie medzi aktérom a systémom môže vyústiť v zmenách stavu systému. Prípad použitia môže byť použitý na znázornenie 
+				vonkajších požiadaviek ako aj na znázornenie funkcionality ponúkanej systémom aktérom mimo jeho hraníc. Prípad použitia sa modeluje ako elipsa a meno prípadu použitia je napísané 
+				vo vnútri elipsy.
+				</li><br/>
+				<img alt="Prípad použitia"  src="Pics/uc/usecase.png" width="114px" height="71px" />
+			
+				<br/><br/>
+				<li><b>Asociácia </b> je vzťah medzi pripadom použitia a iným prípadom použitia alebo medzi aktérom a prípadom použitia. Tento vzťah popisuje vzájomnú interakciu medzi danými entitami, t.j. 
+				výmena dát, signálov a informácií. Znázorňuje sa plnou čiarou.
+				</li><br/>
+				<img alt="Asociácia"  src="Pics/uc/line.png" width="128px" height="74px" />
+			
+				<br/><br/>
+				<li><b>Vzťah "include" </b> popisuje vzťah dvoch prípadov použitia, kde správanie jedného prípadu použitia sa vkladá do správania iného prípadu použitia. V tomto 
+				prípade vzťahu je vkladaný prípad použitia vždy požadovaný pre rozširovaný prípad použitia z dôvodu jeho správneho vykonania. Vzťah sa znázorňuje orientovanou bodkovanou 
+				čiarou od rozširovaného prípadu použitia ku vkladanému prípadu použitia a nápisom "include".
+				</li><br/>
+				<img alt="Vzťah include"  src="Pics/uc/include.png" width="114px" height="57px" />
+			
+				<br/><br/>
+				<li><b>Vzťah "extend" </b>popisuje vzťah rozširujúceho prípadu použitia k rozširovanému prípadu použitia a hovorí kedy a za akých
+				podmienok bude správanie definované v rozširujúcom prípade použitia vložené do rozširovaného. Jeden prípad použitia môže rozširovať viac 
+				ako jeden prípad použitia a jeden prípad použitia môže byť rozšírený viac ako jedným prípadom použitia. Je nutné vedieť aj to, že rozširovaný 
+				prípad použitia je zmysluplný aj bez rozširujucého. Na druhej strane, rozširujúci prípad použitia definuje správanie, ktoré nemusí byť nutne 
+				zmysluplné samo o sebe. Vzťah sa znázorňuje orientovanou bodkovanou čiarou od rozširujúceho prípadu použitia k rozširovanému a nápisom "extend".
+				</li><br/>
+				<img alt="Vzťah extend"  src="Pics/uc/extend.png" width="139px" height="67px" />
+			
+				<br/><br/>
+				<li><b>Generalizácia </b> je vzťah medzi prípadmi použitia alebo medzi aktérmi. Znázorňuje tú skutočnosť, že odvodený elemet (či už aktér alebo prípad použitia) špecifikuje vlastonsti 
+				nového elementu vo väčšej miere ako to bolo v prípade pôvodného elementu. Vzťah sa znázorňuje plnou čiarou s prázdnym trojuholníkom pri tom elemete, od ktorého sa odvodzuje nový element 
+				(podobne ako vzťah predok - potomok v diagrame tired).
+				</li><br/>
+				<img alt="Generalizácia"  src="Pics/uc/generalization.png" width="128px" height="81px" />
+			
+				<br/><br/>
+				<li><b>Poznámka </b> slúži na bližšie popísanie jednotlivých elementov diagramu a je možné ju pripojiť iba k entitám, nie k vzťahom medzi entitami.
+				</li><br/>
+				<img alt="Poznámka"  src="Pics/uc/note.png" width="157px" height="88px" />
+			
+				<br/><br/>
+				<li><b>Čiara k poznámke </b> znázorňuje, ktorú entitu poznámka bližšie popisuje.
+				</li><br/>
+				<img alt="Čiara k poznámke"  src="Pics/uc/dot_line.png" width="139px" height="67px" />
+			</ul>
 			
 			<br/> </br>
 			<br/> </br>

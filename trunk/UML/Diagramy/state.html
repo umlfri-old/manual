@@ -42,18 +42,57 @@
 <body>
 	<ul class="hier1">
 		<h2>
-			UML - Stavový diagram (State Machine Diagram description)
+			UML - Stavový diagram (State Machine Diagram)
 		</h2>
 		<text>
-			Stavový diagram zobrazuje stavy jedného objektu, v ktorých sa počas svojej existencie môže nachádzať ako následok reakcie na udalosti vyskytujúcich sa v systéme.
-			Stavový diagram obsahuje <b>Stavy</b> (obdĺžnik s oblými rohmi), tento element predstavuje stav objektu v danom okamihu. Každý stavový diagram musí mať začiatok a koniec,
-			 pričom začiatok a koniec sú tiež stavy. <b>Prechod</b> (Transition) z jedného stavu do druhého zobrazuje šípka. Prechod môže obsahovať <b>Udalosť</b> (dôvod prechodu, môže to byť
-			  signál, udalosť, zmena v nejakej podmienke a pod.), <b>Podmienku</b> (podmienka, ktorá musí byť splnená, aby prechod medzi stavmi nastal) a <b>Efekt</b> (akcia, ktorá sa vykoná ako 
-			  dôsledok prechodu z jedného stavu do druhého). Syntax pre Prechod je: Udalosť[Podmienka]/Efekt.
+			Stavový diagram modeluje stavy systému, v ktorých sa systém môže vyskytovať a to prechodom medzi jednotlivými stavmi. Môže modelovať správanie sa časti systému, tiež môže modelovať správanie sa 
+			jednotlivých entít (inštancie tried). Tento druh diagramu je vhodným spôsobom znázornenia životného cyklu objektov, resp. vhodným spôsobom zobrazenia usporiadania volaní operácií objektov.
+			
+			<br/><br/>
+			<b>Elementy a spojenia v UML .FRI:</b>
+			<br/>
+			<ul class="hier2">
+				<li><b>Stav </b>modeluje situáciu, počas ktorej pretrváva nezmenený stav objektu. Táto nemennosť môže nastať vtedy, keď objekt čaká na výskyt nejakej udalosti. Avšak stav môže 
+				modelovať i dynamické vlastnosti ako vykonávanie nejakého procesu, t.j. element modelu vstupuje do stavu, keď proces začína a opúšťa ho, keď proces končí. Stav môže mať viacero
+				podôb: jednoduchy stav (takýto stav nemá "podstavy") a kompozitný stav (takýto stav obsahuje jeden alebo viacero podstavov, vstup a výstup sa znázorňuje počiatočným a konečným stavom a 
+				kompozitný stav sa modeluje tak, že element obsahuje elementy "podstavov"). Stav sa modeluje ako obdĺžnik s oblými rohmi rozdelený vodorovnou čiarou na dve časti a meno stavu je v hornej časti tela obdĺžnika.
+				</li><br/>
+				<img alt="Stav"  src="Pics/state/state.png" width="95px" height="98px" />
+			
+				<li><b>Začiatočný a konečný stav </b> sú špeciálne stavy. Začiatočný stav môže byť iba jeden, konečných stavov môže byť viacero. Začiatočný stav reprezentuje stav objeku na začiatku jeho existencie a konečný stav 
+				na konci existencie objektu. Začiatočný stav sa modeluje ako čierny kruh, konečný stav ako čierny kruh v bielom kruhu.
+				</li><br/>
+				<img alt="Začiatočný a konečný stav"  src="Pics/state/begend.png" width="95px" height="125px" />
+				
+				<li><b>Rozhodnutie </b>umožňuje rozdelenie prechodu na viacero možných prechodov podľa vyhodnotenia podmineky. Ak ani jedna podmienka nebude vyhodnotená ako pravdivá, tak vtedy sa hovorí o chybe návrhu. 
+				Preto sa odporúča označik jeden prechod podmienkou "inak, angl. else" pre prípad, že ani jedna z uvažovaných podmienok nebola vyhodnotená ako pravdivá. Rozhodnutie sa modeluje ako kosoštvorec.
+				</li><br/>
+				<img alt="Rozhodnutie"  src="Pics/state/decision.png" width="127px" height="81px" />
+				
+				<li><b>Spojenie </b> môže byť vodorovné alebo zvyslé. Slúži na spojenie viacerých prechodov do jedného (vstupujúce prechody nesmú mať podmienku a ani efekt) alebo na rozdelenie
+				 jedného prechodu na viacero prechodov (vystupujúce prechody nesmú mať podmienku a efekt). Modeluje sa ako vodorovná alebo zvyslá hrubá čiara.
+				</li><br/>
+				<img alt="Spojenie"  src="Pics/state/join.png" width="124px" height="99px" />
+				
+				<li><b>Prechod </b> je orientovaný vzťah medzi zdrojom a cieľom pričom zobrazuje prechod medzi dvoma stavmi v stavovom diagrame a reprezentuje 
+				kompletnú odozvu stavového diagramu na výskyt udalosti patričného typu. Prechod môže obsahovať Udalosť (dôvod prechodu, môže to byť
+				signál, udalosť, zmena v nejakej podmienke a pod.), Podmienku (podmienka, ktorá musí byť splnená, aby prechod medzi stavmi nastal) a Efekt (akcia, ktorá sa vykoná ako 
+				dôsledok prechodu z jedného stavu do druhého). Syntax pre Prechod je: Udalosť[Podmienka]/Efekt. Prechod sa modeluje ako orientovaná čiara a môže obsahovať popis prechodu.
+				</li><br/>
+				<img alt="Prechod"  src="Pics/state/flow.png" width="127px" height="81px" />
+			
+				<br/><br/>
+				<li><b>Poznámka </b> slúži na bližšie popísanie jednotlivých elementov diagramu a je možné ju pripojiť iba k entitám, nie k vzťahom medzi entitami.
+				</li><br/>
+				<img alt="Poznámka"  src="Pics/state/note.png" width="157px" height="88px" />
+			
+				<br/><br/>
+				<li><b>Čiara k poznámke </b> znázorňuje, ktorú entitu poznámka bližšie popisuje.
+				</li><br/>
+				<img alt="Čiara k poznámke"  src="Pics/state/dot_line.png" width="139px" height="67px" />
+			</ul>
 			
 			<br/> </br>
-			<br/> </br>
-			
 			<b>Ukážka stavového diagramu mobilného telefónu:</b>
 			<br>
 			<img alt="Pomenovanie objektov"  src="Pics/state/state1.png" width="720px" height="430px" />
