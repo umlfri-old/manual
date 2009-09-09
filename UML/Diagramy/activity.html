@@ -45,12 +45,51 @@
 			UML - Diagram aktivít (Activity Diagram)
 		</h2>
 			Diagram aktivít popisuje správanie systému z hľadiska jeho pracovného toku (workflow). Tento diagram sa podobá stavovému diagramu, pretože
-			aktivity sú stavom vykonávania niečoho. Diagram popisuje stav aktivít zobrazovaním sekvencie aktivít vykonávaných v systéme. Tieto aktivity môžu byť 
-			paralelné alebo podmienené. Diagram aktivít popisuje aké aktivity sa majú vyskytnúť a kedy sa majú vyskytnúť.
-			Diagram zobrazuje tok aktivít celým systémom. Číta sa zhora nadol a obsahuje <b>vetvy a spojenia</b> (hrubá vodorovná a zvyslá čiara) na zobrazenie a popis aktivít systému, 
-			ktoré sa vyskytujú v rovnakom čase. Diagram aktivít musí mať začiatok a koniec. <b>Aktivity</b> (Activity - obdlžníky so zaoblenými rohmi) sú spojené medzi sebou <b>tokom aktivít</b> 
-			(ActivityFlow - šípka od predchadzajúcej aktivity k nasledujúcej). 
+			aktivity sú stavom vykonávania niečoho. Diagram popisuje stav aktivít zobrazovaním sekvencie aktivít vykonávaných v systéme (tieto aktivity môžu byť 
+			paralelné alebo sekvenčné) a popisuje aké aktivity sa majú vyskytnúť a kedy sa majú vyskytnúť. 
+			Diagram zobrazuje tok aktivít celým systémom. Číta sa zhora nadol a obsahuje vetvy a spojenia (hrubá vodorovná a zvyslá čiara) na zobrazenie a popis aktivít systému, 
+			ktoré sa vyskytujú v rovnakom čase. 
 			
+			<br/><br/>
+			<b>Elementy a spojenia v UML .FRI:</b>
+			<ul class="hier2">
+				<li><b>Aktivita </b>reprezentuje neprerušiteľnú aktivitu objektu. Aktivita môže začať, keď všetky aktivity, ktoré ju predchádzajú skončili a poslali jej potrebné dáta 
+				v rámci toku aktivít. Keď aktivita skončí, pošle výstupné dáta aktivitám, ktoré za ňou následujú. Modeluje sa ako zaoblený obdĺžnik a meno aktivity sa nachádza 
+				vo vnútri obdĺžnika.
+				</li><br/>
+				<img alt="Aktivita"  src="Pics/activity/activity.png" width="145px" height="89px" />
+			
+				<li><b>Začiatočná a konečná aktivita </b>sú špeciálne aktivity. Začiatočná aktivita nie je potrebná, ale uľahčuje čítanie diagramu. Keď skončí počiatočná aktivita, tak dáta 
+				putujú k ďalšej aktivite, ktorá sa vyskytne. Keď konečná aktivita dostane dáta od aktivít, ktoré ju predchádzajú, znamená to koniec celkovej aktivity, ktorú diagram aktivít modeluje. 
+				Začiatočná aktivita sa znázorňuje ako čierny kruh a konečná aktivita sa modeluje ako čierny kruh v bielom kruhu.
+				</li><br/>
+				<img alt="Začiatočná a konečná aktivita"  src="Pics/activity/begend.png" width="95px" height="125px" />
+				
+				<li><b>Rozhodnutie </b>predstavuje podmienené vetvetie v rámci toku aktivít, pričom obsahuje jeden vstup a dva a viacero výstupov. Výstupné toky aktivít sa označujú podmienkou 
+				a práve jedna by mala byť na základe vyhodnotenia podmienky zvolená ako pokračovanie toku aktivít. Modeluje sa ako kosoštvorec. Tento element sa použiva aj na spojenie tokov, ktoré boli 
+				rozdelené elementom Rozhodnutie.
+				</li><br/>
+				<img alt="Rozhodnutie"  src="Pics/activity/decision.png" width="127px" height="81px" />
+				
+				<li><b>Spojenie </b>slúži na spojenie súbežných tokov aktivít, ktoré prebiehali paralelne, ale už zanikla potreba vykonávania aktivít v rôznych vetvách. Modeluje sa ako vodorovná alebo 
+				zvyslá hrubá čiara. Tento element sa použiva aj na rozdelenie toku aktivít do dvoch a viacerých vetiev v prípade, že aktivity je možné vykonávať v systéme paralelne.
+				</li><br/>
+				<img alt="Spojenie"  src="Pics/activity/join.png" width="124px" height="99px" />
+				
+				<li><b>Tok aktivít </b>  sa modeluje ako orientovaná čiara od predchádzajúcej aktivity k následujúcej aktivite. Pre bližšie pochopenie je možné si tok aktivít predstaviť ako tok dát z aktivity, ktorá sa skončila do akivity, ktorá následuje.
+				</li><br/>
+				<img alt="Prechod"  src="Pics/activity/flow.png" width="127px" height="81px" />
+			
+				<br/><br/>
+				<li><b>Poznámka </b> slúži na bližšie popísanie jednotlivých elementov diagramu a je možné ju pripojiť iba k entitám, nie k vzťahom medzi entitami.
+				</li><br/>
+				<img alt="Poznámka"  src="Pics/state/note.png" width="157px" height="88px" />
+			
+				<br/><br/>
+				<li><b>Čiara k poznámke </b> znázorňuje, ktorú entitu poznámka bližšie popisuje.
+				</li><br/>
+				<img alt="Čiara k poznámke"  src="Pics/state/dot_line.png" width="139px" height="67px" />
+			</ul>
 			
 			<br/> </br>
 			<br/> </br>
